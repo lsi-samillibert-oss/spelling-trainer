@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spelling Trainer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .app {
+      background: white;
+      padding: 20px;
+      border-radius: 14px;
+      width: 320px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    h1 {
+      margin-bottom: 10px;
+    }
+    input {
+      font-size: 18px;
+      width: 90%;
+      padding: 8px;
+      text-align: center;
+      margin-top: 10px;
+    }
+    button {
+      font-size: 16px;
+      margin: 6px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: none;
+      background: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+    button.secondary {
+      background: #2196F3;
+    }
+    #feedback {
+      margin-top: 12px;
+      font-size: 16px;
+      min-height: 24px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="app">
+  <h1>Spelling Trainer</h1>
+  <p>Type the word you hear</p>
+
+  <input id="input" autocomplete="off" placeholder="Type here..." />
+  <br>
+
+  <button onclick="submit()">Submit</button>
+  <button class="secondary" onclick="repeatWord()">Repeat</button>
+  <button class="secondary" onclick="saySentence()">Sentence</button>
+
+  <div id="feedback"></div>
+</div>
+
+<script>
+const words = [
+"Confirm","Demonstrate","Supplement","Establish","Conviction","Unalienable","Constrains",
+"Tyranny","Assent","Acquiesce","Rectitude","Exercise","Abridging","Petition","Redress",
+"Infringed","Prescribed","Infallibility","Despotism","Corrupted","Prejudices","Salutary",
+"Integrity","Appeal","Conclave","Eminent","Populist","Loathsome","Wretched","Dejected",
+"Vassals","Foment","Dissented","Syntax","Diction","Dedicated","Consecrate","Hallow",
+"Significant","Incident","Unique","Sequence","Impact","Obdurate","Stolid","Disparity",
+"Denounce","Equivocate","Conceded","Insurgent","Perish","Rend","Scourge","Unrequited",
+"Malice","Composition","Caricature","Racket","Fix","Obliged","Degraded","Oppressed",
+"Subordinate","Persistence","Imploring","Importunities","Plaintiffs","Jurisdiction",
+"Disposition","Inquire","Specific","Verbatim","Analyze","Literal","Determine","Trivialize",
+"Gilded","Ornamented","Grandeur","Picturesquely","Exalted","Eminence","Garrulous",
+"Exasperating","Tedious","Monotonous","Interminable","Buttonholed","Dilatory","Loitered",
+"Hospitality","Squalor","Hermitage","Quaint","Discern","Temporal","Spatial","Palette",
+"Perspective"
+];
+
+const sentences = {};
+words.forEach(w => sentences[w] = `I used the word ${w.toLowerCase()} in a sentence.`);
+
+let remaining = [...words].sort(() => Math.random() - 0.5);
+let current = remaining.pop();
+
+function speak(text) {
+  const u = new SpeechSynthesisUtterance(text);
+  u.rate = 0.9;
+  speechSynthesis.speak(u);
+}
+
+function normalize(s) {
+  return s.toLowerCase().replace(/\s+/g, "");
+}
+
+function sayWord() {
+  speak(current);
+}
+
+function submit() {
+  const input = document.getElementById("input");
+  const feedback = document.getElementById("feedback");
+  const value = input.value.trim();
+  input.value = "";
+
+  if (normalize(value) === normalize(current)) {
+    feedback.textContent = "✅ Correct!";
+    feedback.style.color = "green";
+    speak("Correct");
+    nextWord();
+  } else {
+    feedback.textContent = "❌ Try again";
+    feedback.style.color = "red";
+    speak("Try again");
+    sayWord();
+  }
+}
+
+function repeatWord() {
+  sayWord();
+}
+
+function saySentence() {
+  speak(sentences[current]);
+  document.getElementById("feedback").textContent = sentences[current];
+}
+
+function nextWord() {
+  if (remaining.length === 0) {
+    document.getElementById("feedback").textContent = "🎉 You finished all words!";
+    speak("You finished all words");
+    return;
+  }
+  current = remaining.pop();
+  setTimeout(sayWord, 600);
+}
+
+sayWord();
+</script>
+
+</body>
+</html>
