@@ -965,13 +965,40 @@ let currentIndex = 0;
 let attempts = 0;
 const maxAttempts = 5;
 
-function speak(text){
-  const utterance = new SpeechSynthesisUtterance(text);
-  utterance.lang = "es-ES";
-  utterance.rate = 0.9;
-  speechSynthesis.speak(utterance);
+let spanishVoice = null;
+
+function loadSpanishVoice() {
+  const voices = speechSynthesis.getVoices();
+
+  // Try to find any Spanish voice
+  spanishVoice = voices.find(v => v.lang.toLowerCase().startsWith("es"));
+
+  // If none found, try fallback variants
+  if (!spanishVoice) {
+    spanishVoice = voices.find(v => v.lang.includes("ES") || v.lang.includes("MX"));
+  }
 }
 
+// Important: wait until voices are loaded
+speechSynthesis.onvoiceschanged = loadSpanishVoice;
+
+// Call once in case voices are already available
+loadSpanishVoice();
+
+function speak(text) {
+  const utterance = new SpeechSynthesisUtterance(text);
+
+  if (spanishVoice) {
+    utterance.voice = spanishVoice;
+  }
+
+  utterance.lang = "es-ES";
+  utterance.rate = 0.9;
+  utterance.pitch = 1;
+
+  speechSynthesis.cancel(); // stop overlapping speech
+  speechSynthesis.speak(utterance);
+}
 function speakWord(){
   speak(wordsData[currentIndex].word);
 }
