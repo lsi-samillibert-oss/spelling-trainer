@@ -1,149 +1,165 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Spelling Trainer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    .app {
-      background: white;
-      padding: 20px;
-      border-radius: 14px;
-      width: 320px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
-    h1 {
-      margin-bottom: 10px;
-    }
-    input {
-      font-size: 18px;
-      width: 90%;
-      padding: 8px;
-      text-align: center;
-      margin-top: 10px;
-    }
-    button {
-      font-size: 16px;
-      margin: 6px;
-      padding: 8px 12px;
-      border-radius: 8px;
-      border: none;
-      background: #4CAF50;
-      color: white;
-      cursor: pointer;
-    }
-    button.secondary {
-      background: #2196F3;
-    }
-    #feedback {
-      margin-top: 12px;
-      font-size: 16px;
-      min-height: 24px;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Drill de Análisis de Palabras</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.app {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  width: 350px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+h2 { text-align:center; }
+input {
+  width: 100%;
+  margin: 6px 0;
+  padding: 6px;
+}
+button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 8px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+}
+#feedback {
+  margin-top: 12px;
+  min-height: 24px;
+}
+</style>
 </head>
 <body>
 
 <div class="app">
-  <h1>Spelling Trainer</h1>
-  <p>Type the word you hear</p>
+<h2>Drill de Análisis</h2>
 
-  <input id="input" autocomplete="off" placeholder="Type here..." />
-  <br>
+<p><strong>Palabra:</strong> <span id="word"></span></p>
 
-  <button onclick="submit()">Submit</button>
-  <button class="secondary" onclick="repeatWord()">Repeat</button>
-  <button class="secondary" onclick="saySentence()">Sentence</button>
+<input id="spelling" placeholder="1. Ortografía correcta">
+<input id="syllables" placeholder="2. Separación silábica">
+<input id="count" placeholder="3. Número de sílabas">
+<input id="stress" placeholder="4. Clasificación (Aguda/Llana/Esdrújula/Sobresdrújula)">
+<input id="vowels" placeholder="5. Diptongo / Hiato / Ninguno">
 
-  <div id="feedback"></div>
+<button onclick="check()">Enviar</button>
+
+<div id="feedback"></div>
 </div>
 
 <script>
-const words = [
-"Confirm","Demonstrate","Supplement","Establish","Conviction","Unalienable","Constrains",
-"Tyranny","Assent","Acquiesce","Rectitude","Exercise","Abridging","Petition","Redress",
-"Infringed","Prescribed","Infallibility","Despotism","Corrupted","Prejudices","Salutary",
-"Integrity","Appeal","Conclave","Eminent","Populist","Loathsome","Wretched","Dejected",
-"Vassals","Foment","Dissented","Syntax","Diction","Dedicated","Consecrate","Hallow",
-"Significant","Incident","Unique","Sequence","Impact","Obdurate","Stolid","Disparity",
-"Denounce","Equivocate","Conceded","Insurgent","Perish","Rend","Scourge","Unrequited",
-"Malice","Composition","Caricature","Racket","Fix","Obliged","Degraded","Oppressed",
-"Subordinate","Persistence","Imploring","Importunities","Plaintiffs","Jurisdiction",
-"Disposition","Inquire","Specific","Verbatim","Analyze","Literal","Determine","Trivialize",
-"Gilded","Ornamented","Grandeur","Picturesquely","Exalted","Eminence","Garrulous",
-"Exasperating","Tedious","Monotonous","Interminable","Buttonholed","Dilatory","Loitered",
-"Hospitality","Squalor","Hermitage","Quaint","Discern","Temporal","Spatial","Palette",
-"Perspective"
+const wordsData = [
+{
+word:"Constitución",
+syllables:"cons-ti-tu-ción",
+count:"4",
+stress:"Aguda",
+vowels:"Diptongo iu"
+},
+{
+word:"vergüenza",
+syllables:"ver-güen-za",
+count:"3",
+stress:"Llana",
+vowels:"Diptongo üe"
+},
+{
+word:"arqueología",
+syllables:"ar-que-o-lo-gí-a",
+count:"6",
+stress:"Esdrújula",
+vowels:"Hiato ía"
+},
+{
+word:"reunión",
+syllables:"reu-nión",
+count:"2",
+stress:"Aguda",
+vowels:"Diptongo eu"
+},
+{
+word:"demuéstramelo",
+syllables:"de-mués-tra-me-lo",
+count:"5",
+stress:"Sobresdrújula",
+vowels:"Diptongo ue"
+}
 ];
 
-const sentences = {};
-words.forEach(w => sentences[w] = `I used the word ${w.toLowerCase()} in a sentence.`);
+let currentIndex = 0;
+let attempts = 0;
+const maxAttempts = 5;
 
-let remaining = [...words].sort(() => Math.random() - 0.5);
-let current = remaining.pop();
+function loadWord(){
+  document.getElementById("word").textContent = wordsData[currentIndex].word;
+}
+loadWord();
 
-function speak(text) {
-  const u = new SpeechSynthesisUtterance(text);
-  u.rate = 0.9;
-  speechSynthesis.speak(u);
+function normalize(s){
+  return s.trim().toLowerCase();
 }
 
-function normalize(s) {
-  return s.toLowerCase().replace(/\s+/g, "");
-}
-
-function sayWord() {
-  speak(current);
-}
-
-function submit() {
-  const input = document.getElementById("input");
+function check(){
+  const data = wordsData[currentIndex];
   const feedback = document.getElementById("feedback");
-  const value = input.value.trim();
-  input.value = "";
 
-  if (normalize(value) === normalize(current)) {
-    feedback.textContent = "✅ Correct!";
-    feedback.style.color = "green";
-    speak("Correct");
-    nextWord();
+  const spelling = normalize(document.getElementById("spelling").value);
+  const syllables = normalize(document.getElementById("syllables").value);
+  const count = normalize(document.getElementById("count").value);
+  const stress = normalize(document.getElementById("stress").value);
+  const vowels = normalize(document.getElementById("vowels").value);
+
+  let wrong = [];
+
+  if(spelling !== normalize(data.word)) wrong.push("1");
+  if(syllables !== normalize(data.syllables)) wrong.push("2");
+  if(count !== normalize(data.count)) wrong.push("3");
+  if(stress !== normalize(data.stress)) wrong.push("4");
+  if(!vowels.includes(normalize(data.vowels.split(" ")[0]))) wrong.push("5");
+
+  if(wrong.length === 0){
+    feedback.innerHTML = "✅ Todo correcto. Siguiente palabra.";
+    attempts = 0;
+    currentIndex++;
+    if(currentIndex >= wordsData.length){
+      feedback.innerHTML = "🎉 Terminaste el ejercicio.";
+      return;
+    }
+    setTimeout(loadWord, 1000);
   } else {
-    feedback.textContent = "❌ Try again";
-    feedback.style.color = "red";
-    speak("Try again");
-    sayWord();
+    attempts++;
+    if(attempts < maxAttempts){
+      feedback.innerHTML = "❌ Categorías incorrectas: " + wrong.join(", ") + ". Intenta otra vez.";
+    } else {
+      feedback.innerHTML =
+      "❌ 5 intentos fallidos.<br><br>" +
+      "<strong>Corrección:</strong><br>" +
+      "Ortografía: " + data.word + "<br>" +
+      "Sílabas: " + data.syllables + "<br>" +
+      "Número: " + data.count + "<br>" +
+      "Clasificación: " + data.stress + "<br>" +
+      "Vocales: " + data.vowels;
+      attempts = 0;
+      currentIndex++;
+      if(currentIndex < wordsData.length){
+        setTimeout(loadWord, 4000);
+      }
+    }
   }
 }
-
-function repeatWord() {
-  sayWord();
-}
-
-function saySentence() {
-  speak(sentences[current]);
-  document.getElementById("feedback").textContent = sentences[current];
-}
-
-function nextWord() {
-  if (remaining.length === 0) {
-    document.getElementById("feedback").textContent = "🎉 You finished all words!";
-    speak("You finished all words");
-    return;
-  }
-  current = remaining.pop();
-  setTimeout(sayWord, 600);
-}
-
-sayWord();
 </script>
 
 </body>
