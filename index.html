@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Drill de Análisis de Palabras</title>
+<title>Drill Auditivo de Análisis</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 body {
@@ -17,7 +17,7 @@ body {
   background: white;
   padding: 20px;
   border-radius: 14px;
-  width: 350px;
+  width: 360px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 h2 { text-align:center; }
@@ -27,35 +27,37 @@ input {
   padding: 6px;
 }
 button {
-  margin-top: 10px;
+  margin-top: 8px;
   width: 100%;
   padding: 8px;
-  background: #4CAF50;
-  color: white;
   border: none;
   border-radius: 8px;
   font-size: 16px;
 }
+.primary { background:#4CAF50; color:white; }
+.secondary { background:#2196F3; color:white; }
 #feedback {
   margin-top: 12px;
-  min-height: 24px;
+  min-height: 30px;
 }
 </style>
 </head>
 <body>
 
 <div class="app">
-<h2>Drill de Análisis</h2>
+<h2>Drill Auditivo</h2>
 
-<p><strong>Palabra:</strong> <span id="word"></span></p>
+<p>Escucha la palabra y analízala:</p>
+
+<button class="secondary" onclick="speakWord()">🔊 Repetir palabra</button>
 
 <input id="spelling" placeholder="1. Ortografía correcta">
 <input id="syllables" placeholder="2. Separación silábica">
 <input id="count" placeholder="3. Número de sílabas">
-<input id="stress" placeholder="4. Clasificación (Aguda/Llana/Esdrújula/Sobresdrújula)">
+<input id="stress" placeholder="4. Aguda / Llana / Esdrújula / Sobresdrújula">
 <input id="vowels" placeholder="5. Diptongo / Hiato / Ninguno">
 
-<button onclick="check()">Enviar</button>
+<button class="primary" onclick="check()">Enviar</button>
 
 <div id="feedback"></div>
 </div>
@@ -103,13 +105,35 @@ let currentIndex = 0;
 let attempts = 0;
 const maxAttempts = 5;
 
-function loadWord(){
-  document.getElementById("word").textContent = wordsData[currentIndex].word;
+function speak(text){
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = "es-ES";
+  u.rate = 0.9;
+  speechSynthesis.speak(u);
 }
-loadWord();
+
+function speakWord(){
+  speak(wordsData[currentIndex].word);
+}
 
 function normalize(s){
   return s.trim().toLowerCase();
+}
+
+function clearInputs(){
+  document.querySelectorAll("input").forEach(i => i.value = "");
+}
+
+function nextWord(){
+  attempts = 0;
+  currentIndex++;
+  if(currentIndex >= wordsData.length){
+    document.getElementById("feedback").innerHTML = "🎉 Terminaste el ejercicio.";
+    speak("Has terminado el ejercicio.");
+    return;
+  }
+  clearInputs();
+  setTimeout(speakWord, 600);
 }
 
 function check(){
@@ -132,34 +156,30 @@ function check(){
 
   if(wrong.length === 0){
     feedback.innerHTML = "✅ Todo correcto. Siguiente palabra.";
-    attempts = 0;
-    currentIndex++;
-    if(currentIndex >= wordsData.length){
-      feedback.innerHTML = "🎉 Terminaste el ejercicio.";
-      return;
-    }
-    setTimeout(loadWord, 1000);
+    speak("Correcto");
+    nextWord();
   } else {
     attempts++;
     if(attempts < maxAttempts){
-      feedback.innerHTML = "❌ Categorías incorrectas: " + wrong.join(", ") + ". Intenta otra vez.";
+      feedback.innerHTML = "❌ Categorías incorrectas: " + wrong.join(", ");
+      speak("Intenta otra vez");
+      speakWord();
     } else {
       feedback.innerHTML =
       "❌ 5 intentos fallidos.<br><br>" +
       "<strong>Corrección:</strong><br>" +
-      "Ortografía: " + data.word + "<br>" +
+      "Palabra: " + data.word + "<br>" +
       "Sílabas: " + data.syllables + "<br>" +
       "Número: " + data.count + "<br>" +
       "Clasificación: " + data.stress + "<br>" +
       "Vocales: " + data.vowels;
-      attempts = 0;
-      currentIndex++;
-      if(currentIndex < wordsData.length){
-        setTimeout(loadWord, 4000);
-      }
+      speak("Cinco intentos fallidos");
+      nextWord();
     }
   }
 }
+
+setTimeout(speakWord, 800);
 </script>
 
 </body>
