@@ -1,0 +1,896 @@
+{
+word:"Constitución",
+syllables:"cons-ti-tu-ción",
+count:"4",
+stress:"Aguda",
+vowels:"Diptongo iu"
+},
+{
+word:"hispanoamericano",
+syllables:"his-pa-no-a-me-ri-ca-no",
+count:"8",
+stress:"Llana",
+vowels:"Hiato o-a"
+},
+{
+word:"instrucciones",
+syllables:"ins-truc-cio-nes",
+count:"4",
+stress:"Llana",
+vowels:"Diptongo io"
+},
+{
+word:"cotidiana",
+syllables:"co-ti-dia-na",
+count:"4",
+stress:"Llana",
+vowels:"Diptongo ia"
+},
+{
+word:"situaciones",
+syllables:"si-tua-cio-nes",
+count:"4",
+stress:"Llana",
+vowels:"Diptongo ua / io"
+},
+{
+word:"electrodomésticos",
+syllables:"e-lec-tro-do-més-ti-cos",
+count:"7",
+stress:"Esdrújula",
+vowels:"-"
+},
+{
+word:"Luxemburgo",
+syllables:"lu-xem-bur-go",
+count:"4",
+stress:"Llana",
+vowels:"-"
+},
+{
+word:"reinado",
+syllables:"rei-na-do",
+count:"3",
+stress:"Llana",
+vowels:"Diptongo ei"
+},
+{
+word:"paratextuales",
+syllables:"pa-ra-tex-tua-les",
+count:"5",
+stress:"Llana",
+vowels:"Diptongo ua"
+},
+{
+word:"mecánicamente",
+syllables:"me-cá-ni-ca-men-te",
+count:"6",
+stress:"Esdrújula",
+vowels:"-"
+},
+{
+word:"diagnóstico",
+syllables:"diag-nós-ti-co",
+count:"4",
+stress:"Esdrújula",
+vowels:"Diptongo ia"
+},
+{
+word:"vergüenza",
+syllables:"ver-güen-za",
+count:"3",
+stress:"Llana",
+vowels:"Diptongo üe"
+},
+{
+word:"almohadón",
+syllables:"al-mo-ha-dón",
+count:"4",
+stress:"Aguda",
+vowels:"-"
+},
+{
+word:"extinguiéndose",
+syllables:"ex-tin-guién-do-se",
+count:"5",
+stress:"Esdrújula",
+vowels:"Diptongo ie"
+},
+{
+word:"publicitario",
+syllables:"pu-bli-ci-ta-rio",
+count:"6",
+stress:"Llana",
+vowels:"Diptongo io"
+},
+{
+word:"secuencia",
+syllables:"se-cuen-cia",
+count:"3",
+stress:"Llana",
+vowels:"Diptongo ue / ia"
+},
+{
+word:"rehén",
+syllables:"re-hén",
+count:"2",
+stress:"Aguda",
+vowels:"Hiato e-é"
+},
+{
+word:"retroalimentación",
+syllables:"re-tro-a-li-men-ta-ción",
+count:"7",
+stress:"Aguda",
+vowels:"Hiato o-a / Diptongo io"
+},
+{
+word:"proporcionado",
+syllables:"pro-por-cio-na-do",
+count:"5",
+stress:"Llana",
+vowels:"Diptongo io"
+},
+{
+word:"admirable",
+syllables:"ad-mi-ra-ble",
+count:"4",
+stress:"Llana",
+vowels:"-"
+},
+{
+word:"transcurrir",
+syllables:"trans-cu-rrir",
+count:"3",
+stress:"Aguda",
+vowels:"-"
+},
+{
+word:"dominicano",
+syllables:"do-mi-ni-ca-no",
+count:"5",
+stress:"Llana",
+vowels:"-"
+},
+{
+word:"éticamente",
+syllables:"é-ti-ca-men-te",
+count:"5",
+stress:"Esdrújula",
+vowels:"-"
+},
+{
+word:"alucinaciones",
+syllables:"a-lu-ci-na-cio-nes",
+count:"6",
+stress:"Llana",
+vowels:"Diptongo io"
+},
+{
+word:"prescripción",
+syllables:"pres-crip-ción",
+count:"3",
+stress:"Aguda",
+vowels:"Diptongo io"
+},
+{
+word:"anticonstitucionalista",
+syllables:"an-ti-cons-ti-tu-cio-na-lis-ta",
+count:"10",
+stress:"Llana",
+vowels:"Diptongo io"
+},
+{
+word:"enunciados",
+syllables:"e-nun-cia-dos",
+count:"4",
+stress:"Llana",
+vowels:"Diptongo ia"
+},
+{
+word:"paciencia",
+syllables:"pa-cien-cia",
+count:"3",
+stress:"Llana",
+vowels:"Diptongo ie / ia"
+},
+{
+word:"arqueología",
+syllables:"ar-que-o-lo-gí-a",
+count:"6",
+stress:"Esdrújula",
+vowels:"Hiato í-a"
+},
+{
+word:"funcionamiento",
+syllables:"fun-cio-na-mien-to",
+count:"5",
+stress:"Llana",
+vowels:"Diptongo io / ie"
+},
+{
+word:"disciplina",
+syllables:"dis-ci-pli-na",
+count:"4",
+stress:"Llana",
+vowels:"-"
+},
+{
+word:"enunciados",
+syllables:"e-nun-cia-dos",
+count:"4",
+stress:"Llana",
+vowels:"Diptongo ia"
+},
+{
+word:"diccionario",
+syllables:"dic-cio-na-rio",
+count:"4",
+stress:"Llana",
+vowels:"Diptongo io"
+},
+{
+word:"compañerismo",
+syllables:"com-pa-ñe-ris-mo",
+count:"5",
+stress:"Llana",
+vowels:"-"
+},
+{
+word:"adolescentes",
+syllables:"a-do-les-cen-tes",
+count:"5",
+stress:"Llana",
+vowels:"-"
+},
+{
+word:"emergencia",
+syllables:"e-mer-gen-cia",
+count:"4",
+stress:"Llana",
+vowels:"Diptongo ia"
+},
+{
+word:"asambleísta",
+syllables:"a-sam-ble-ís-ta",
+count:"5",
+stress:"Esdrújula",
+vowels:"Hiato e-í"
+},
+{
+word:"demuéstramelo",
+syllables:"de-mués-tra-me-lo",
+count:"5",
+stress:"Sobresdrújula",
+vowels:"Diptongo ue"
+},
+{
+word:"genético",
+syllables:"ge-né-ti-co",
+count:"4",
+stress:"Esdrújula",
+vowels:"-"
+},
+{
+word:"patético",
+syllables:"pa-té-ti-co",
+count:"4",
+stress:"Esdrújula",
+vowels:"-"
+},
+{
+word:"Ecuador",
+syllables:"e-cua-dor",
+count:"3",
+stress:"Aguda",
+vowels:"Diptongo ua"
+},
+{
+word:"sinvergüenza",
+syllables:"sin-ver-güen-za",
+count:"4",
+stress:"Llana",
+vowels:"Diptongo üe"
+},
+{
+word:"proveedor",
+syllables:"pro-ve-e-dor",
+count:"4",
+stress:"Aguda",
+vowels:"Hiato e-e"
+},
+{
+word:"buey",
+syllables:"buey",
+count:"1",
+stress:"Aguda",
+vowels:"Triptongo uey"
+},
+{
+word:"bibliotecario",
+syllables:"bi-blio-te-ca-rio",
+count:"5",
+stress:"Llana",
+vowels:"Diptongo io"
+},
+{
+word:"circunstancialmente",
+syllables:"cir-cuns-tan-cial-men-te",
+count:"6",
+stress:"Llana",
+vowels:"Diptongo ia"
+},
+{
+word:"originalidad",
+syllables:"o-ri-gi-na-li-dad",
+count:"6",
+stress:"Aguda",
+vowels:"-"
+},
+{
+word:"intermedio",
+syllables:"in-ter-me-dio",
+count:"4",
+stress:"Llana",
+vowels:"Diptongo io"
+},
+{
+word:"desagüe",
+syllables:"de-sa-güe",
+count:"3",
+stress:"Llana",
+vowels:"Diptongo üe"
+},
+{
+word:"neoclásico",
+syllables:"ne-o-clá-si-co",
+count:"5",
+stress:"Esdrújula",
+vowels:"Hiato e-o"
+},
+{
+word:"jurisdicción",
+syllables:"ju-ris-dic-ción",
+count:"4",
+stress:"Aguda",
+vowels:"Diptongo io"
+},
+{
+word:"jerarquizar",
+syllables:"je-rar-qui-zar",
+count:"4",
+stress:"Aguda",
+vowels:"-"
+},
+{
+word:"ágilmente",
+syllables:"á-gil-men-te",
+count:"4",
+stress:"Esdrújula",
+vowels:"-"
+},
+{
+word:"independencia",
+syllables:"in-de-pen-den-cia",
+count:"5",
+stress:"Llana",
+vowels:"Diptongo ia"
+},
+{
+word:"Afganistán",
+syllables:"af-ga-nis-tán",
+count:"4",
+stress:"Aguda",
+vowels:"-"
+},
+{
+word:"bizarro",
+syllables:"bi-za-rro",
+count:"3",
+stress:"Llana",
+vowels:"-"
+},
+{
+word:"organismo",
+syllables:"or-ga-nis-mo",
+count:"4",
+stress:"Llana",
+vowels:"-"
+},
+{
+word:"consideraciones",
+syllables:"con-si-de-ra-cio-nes",
+count:"6",
+stress:"Llana",
+vowels:"Diptongo io"
+},
+{
+word:"acústica",
+syllables:"a-cús-ti-ca",
+count:"4",
+stress:"Esdrújula",
+vowels:"-"
+},
+{
+word:"abundancia",
+syllables:"a-bun-dan-cia",
+count:"4",
+stress:"Llana",
+vowels:"Diptongo ia"
+},
+{
+word:"audiovisual",
+syllables:"au-dio-vi-sual",
+count:"4",
+stress:"Llana",
+vowels:"Diptongo au / io / ua"
+},
+{
+word:"ordinariamente",
+syllables:"or-di-na-ria-men-te",
+count:"6",
+stress:"Llana",
+vowels:"Diptongo ia"
+},
+{
+word:"desconsideración",
+syllables:"des-con-si-de-ra-ción",
+count:"6",
+stress:"Aguda",
+vowels:"Diptongo io"
+},
+{
+word:"honorable",
+syllables:"ho-no-ra-ble",
+count:"4",
+stress:"Llana",
+vowels:"-"
+},
+{
+word:"imaginativa",
+syllables:"i-ma-gi-na-ti-va",
+count:"6",
+stress:"Llana",
+vowels:"-"
+},
+{
+word:"prerromanticismo",
+syllables:"pre-rro-man-ti-cis-mo",
+count:"6",
+stress:"Llana",
+vowels:"-"
+},
+{
+word:"filosófico",
+syllables:"fi-lo-só-fi-co",
+count:"5",
+stress:"Esdrújula",
+vowels:"-"
+},
+{
+word:"venezolano",
+syllables:"ve-ne-zo-la-no",
+count:"5",
+stress:"Llana",
+vowels:"-"
+},
+{
+word:"tolerancia",
+syllables:"to-le-ran-cia",
+count:"4",
+stress:"Llana",
+vowels:"Diptongo ia"
+},
+{
+word:"transmitiendo",
+syllables:"trans-mi-tien-do",
+count:"4",
+stress:"Llana",
+vowels:"Diptongo ie"
+},
+{
+word:"autores",
+syllables:"au-to-res",
+count:"3",
+stress:"Llana",
+vowels:"Diptongo au"
+},
+{
+word:"estadística",
+syllables:"es-ta-dís-ti-ca",
+count:"5",
+stress:"Esdrújula",
+vowels:"-"
+},
+{
+word:"güira",
+syllables:"güi-ra",
+count:"2",
+stress:"Llana",
+vowels:"Diptongo üi"
+},
+{
+word:"nicaragüense",
+syllables:"ni-ca-ra-güen-se",
+count:"5",
+stress:"Llana",
+vowels:"Diptongo üe"
+},
+{
+word:"retahíla",
+syllables:"re-ta-hí-la",
+count:"4",
+stress:"Esdrújula",
+vowels:"Hiato a-í"
+},
+{
+word:"investigación",
+syllables:"in-ves-ti-ga-ción",
+count:"5",
+stress:"Aguda",
+vowels:"Diptongo io"
+},
+{
+word:"alimentación",
+syllables:"a-li-men-ta-ción",
+count:"5",
+stress:"Aguda",
+vowels:"Diptongo io"
+},
+{
+word:"yuxtaposición",
+syllables:"yux-ta-po-si-ción",
+count:"4",
+stress:"Aguda",
+vowels:"Diptongo io"
+},
+{
+word:"contrariedad",
+syllables:"con-tra-rie-dad",
+count:"4",
+stress:"Aguda",
+vowels:"Diptongo ie"
+},
+{
+word:"categorías",
+syllables:"ca-te-go-rí-as",
+count:"5",
+stress:"Esdrújula",
+vowels:"Hiato í-a"
+},
+{
+word:"océano",
+syllables:"o-cé-a-no",
+count:"4",
+stress:"Esdrújula",
+vowels:"Hiato é-a"
+},
+{
+word:"representativo",
+syllables:"re-pre-sen-ta-ti-vo",
+count:"6",
+stress:"Llana",
+vowels:"-"
+},
+{
+word:"argumentación",
+syllables:"ar-gu-men-ta-ción",
+count:"5",
+stress:"Aguda",
+vowels:"Diptongo io"
+},
+{
+word:"magnificado",
+syllables:"mag-ni-fi-ca-do",
+count:"5",
+stress:"Llana",
+vowels:"-"
+},
+{
+word:"equivalencia",
+syllables:"e-qui-va-len-cia",
+count:"5",
+stress:"Llana",
+vowels:"Diptongo ia"
+},
+{
+word:"metamorfosis",
+syllables:"me-ta-mor-fo-sis",
+count:"5",
+stress:"Llana",
+vowels:"-"
+},
+{
+word:"científico",
+syllables:"cien-tí-fi-co",
+count:"4",
+stress:"Esdrújula",
+vowels:"Diptongo ie"
+},
+{
+word:"metodología",
+syllables:"me-to-do-lo-gí-a",
+count:"6",
+stress:"Esdrújula",
+vowels:"Hiato í-a"
+},
+{
+word:"académico",
+syllables:"a-ca-dé-mi-co",
+count:"5",
+stress:"Esdrújula",
+vowels:"-"
+},
+{
+word:"simultáneamente",
+syllables:"si-mul-tá-ne-a-men-te",
+count:"7",
+stress:"Esdrújula",
+vowels:"Hiato e-a"
+},
+{
+word:"surrealista",
+syllables:"su-rre-a-lis-ta",
+count:"5",
+stress:"Llana",
+vowels:"Hiato e-a"
+},
+{
+word:"índole",
+syllables:"ín-do-le",
+count:"3",
+stress:"Esdrújula",
+vowels:"-"
+},
+{
+word:"reunión",
+syllables:"reu-nión",
+count:"2",
+stress:"Aguda",
+vowels:"Diptongo eu"
+},
+{
+word:"acontecimiento",
+syllables:"a-con-te-ci-mien-to",
+count:"6",
+stress:"Llana",
+vowels:"Diptongo ie"
+},
+{
+word:"ideológico",
+syllables:"i-de-o-ló-gi-co",
+count:"6",
+stress:"Esdrújula",
+vowels:"Hiato e-o"
+},
+{
+word:"psicología",
+syllables:"psi-co-lo-gí-a",
+count:"5",
+stress:"Esdrújula",
+vowels:"Hiato í-a"
+},
+{
+word:"atmosférico",
+syllables:"at-mos-fé-ri-co",
+count:"5",
+stress:"Esdrújula",
+vowels:"-"
+},
+{
+word:"individualista",
+syllables:"in-di-vi-dua-lis-ta",
+count:"6",
+stress:"Llana",
+vowels:"Diptongo ua"
+},
+{
+word:"oída",
+syllables:"o-í-da",
+count:"3",
+stress:"Llana",
+vowels:"Hiato o-í"
+},
+{
+word:"improvisación",
+syllables:"im-pro-vi-sa-ción",
+count:"5",
+stress:"Aguda",
+vowels:"Diptongo io"
+},
+{
+word:"simbolismo",
+syllables:"sim-bo-lis-mo",
+count:"4",
+stress:"Llana",
+vowels:"-"
+},
+{
+word:"aprovechamiento",
+syllables:"a-pro-ve-cha-mien-to",
+count:"6",
+stress:"Llana",
+vowels:"Diptongo ie"
+},
+{
+word:"párrafo",
+syllables:"pá-rra-fo",
+count:"3",
+stress:"Esdrújula",
+vowels:"-"
+},
+{
+word:"caótico",
+syllables:"ca-ó-ti-co",
+count:"4",
+stress:"Esdrújula",
+vowels:"Hiato a-ó"
+},
+{
+word:"aeropuerto",
+syllables:"a-e-ro-puer-to",
+count:"5",
+stress:"Llana",
+vowels:"Hiato a-e / Diptongo ue"
+},
+{
+word:"ambigüedad",
+syllables:"am-bi-güe-dad",
+count:"4",
+stress:"Aguda",
+vowels:"Diptongo üe"
+},
+{
+word:"insinuaciones",
+syllables:"in-si-nua-cio-nes",
+count:"6",
+stress:"Llana",
+vowels:"Diptongo ua / io"
+},
+{
+word:"periodístico",
+syllables:"pe-rio-dís-ti-co",
+count:"5",
+stress:"Esdrújula",
+vowels:"Diptongo io"
+},
+{
+word:"relevancia",
+syllables:"re-le-van-cia",
+count:"4",
+stress:"Llana",
+vowels:"Diptongo ia"
+},
+{
+word:"contraargumento",
+syllables:"con-tra-ar-gu-men-to",
+count:"6",
+stress:"Llana",
+vowels:"Hiato a-a"
+},
+{
+word:"dócilmente",
+syllables:"dó-cil-men-te",
+count:"4",
+stress:"Esdrújula",
+vowels:"-"
+},
+{
+word:"ensayo",
+syllables:"en-sa-yo",
+count:"3",
+stress:"Llana",
+vowels:"Diptongo ayo"
+},
+{
+word:"Australia",
+syllables:"aus-tra-lia",
+count:"3",
+stress:"Llana",
+vowels:"Diptongo au / ia"
+},
+{
+word:"estadounidense",
+syllables:"es-ta-dou-ni-den-se",
+count:"6",
+stress:"Llana",
+vowels:"Diptongo ou"
+},
+{
+word:"existencia",
+syllables:"e-xis-ten-cia",
+count:"5",
+stress:"Llana",
+vowels:"Diptongo ia"
+},
+{
+word:"contradictorio",
+syllables:"con-tra-dic-to-rio",
+count:"5",
+stress:"Llana",
+vowels:"Diptongo io"
+},
+{
+word:"europeo",
+syllables:"eu-ro-pe-o",
+count:"4",
+stress:"Llana",
+vowels:"Diptongo eu / Hiato e-o"
+},
+{
+word:"extraordinariamente",
+syllables:"ex-tra-or-di-na-ria-men-te",
+count:"8",
+stress:"Llana",
+vowels:"Hiato a-o / Diptongo ia"
+},
+{
+word:"pragmático",
+syllables:"prag-má-ti-co",
+count:"4",
+stress:"Esdrújula",
+vowels:"-"
+},
+{
+word:"lingüística",
+syllables:"lin-güís-ti-ca",
+count:"4",
+stress:"Esdrújula",
+vowels:"Diptongo üi"
+},
+{
+word:"versátil",
+syllables:"ver-sá-til",
+count:"3",
+stress:"Llana",
+vowels:"-"
+},
+{
+word:"inmediatamente",
+syllables:"in-me-dia-ta-men-te",
+count:"6",
+stress:"Llana",
+vowels:"Diptongo ia"
+},
+{
+word:"expositivo",
+syllables:"ex-po-si-ti-vo",
+count:"5",
+stress:"Llana",
+vowels:"-"
+},
+{
+word:"precisión",
+syllables:"pre-ci-sión",
+count:"3",
+stress:"Aguda",
+vowels:"Diptongo io"
+},
+{
+word:"desayuno",
+syllables:"de-sa-yu-no",
+count:"4",
+stress:"Llana",
+vowels:"-"
+},
+{
+word:"fundamentalista",
+syllables:"fun-da-men-ta-lis-ta",
+count:"6",
+stress:"Llana",
+vowels:"-"
+},
+{
+word:"coherencia",
+syllables:"co-he-ren-cia",
+count:"4",
+stress:"Llana",
+vowels:"Diptongo ia"
+},
+{
+word:"coordinación",
+syllables:"co-or-di-na-ción",
+count:"6",
+stress:"Aguda",
+vowels:"Hiato o-o / Diptongo io"
+}
