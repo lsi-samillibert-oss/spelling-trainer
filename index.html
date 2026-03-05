@@ -961,6 +961,12 @@ vowels:"Hiato o-o / Diptongo io"
 
 ];
 
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}shuffleArray(wordsData);
 let currentIndex = 0;
 let attempts = 0;
 const maxAttempts = 5;
